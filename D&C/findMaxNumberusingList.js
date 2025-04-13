@@ -15,7 +15,7 @@ function maxElement(arr, index) {
 console.log(maxElement([1, 2, 3, 4, 5, 99, 8, 7], 0));
 
 /*
-
+    
 function findMax(arr, index = 0, currentMax = -Infinity) {
   // Base case: end of array
   if (index >= arr.length) {
