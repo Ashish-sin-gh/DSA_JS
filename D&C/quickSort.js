@@ -11,7 +11,8 @@
 // quicksort - average case - O(n * log n)
 
 // The performance of quicksort heavily depends on the pivot you choose
-let arr = [10, 20, 40, 54545, 50, 40];
+
+let arr = [15, 27, 12, 5, 8, 90, 60];
 
 quicksort(arr, 0, arr.length - 1);
 console.log(arr);
