@@ -16,7 +16,7 @@ class PrimeNumberChecker{
 
     public static void main(String[] args){
         Scanner scn = new Scanner(System.in);
-        System.out.println("enter the number:");
+        System.out.print("enter the number: ");
         int num = scn.nextInt();
 
         
