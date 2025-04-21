@@ -10,14 +10,13 @@ public class Fibbonacci {
         int sum = 0;
 
         System.out.println("output is: ");
-        System.out.println(first);
-        System.out.println(second);
-
-        for(int i=3; i<=num; i++){
+        
+        for(int i=1; i<=num; i++){
+            System.out.println(first);
             sum = first + second;
             first = second;
             second = sum;
-            System.out.println(sum);
+            // System.out.println(sum);
         }
     }
 }
