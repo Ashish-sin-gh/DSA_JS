@@ -14,23 +14,19 @@ public class digitOfNumbers {
         while(numTemp > 0){
             count ++ ;
             numTemp = numTemp / 10;
+            // System.out.println(numTemp);
         }
-        // System.out.println(count);
+        System.out.println(count);
 
         // div by 10 -> rem * pow(10,count)
-        int revNum = 0;
-        while(num > 0){
-            int rem = num % 10;
-            revNum += rem * Math.pow(10, count-1);
-            count --;
-            num = num / 10;
-        }
-        // System.out.println(revNum);
+        // number reversed?
+        int div = (int)Math.pow(10, count-1); 
 
-        while(revNum > 0){
-            int rem = revNum % 10;
+        while(div > 0){
+            int rem = num / div;
             System.out.println(rem);
-            revNum = revNum / 10;
+            num = num % div;
+            div = div / 10;
         }
     
     }
