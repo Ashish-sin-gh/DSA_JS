@@ -36,9 +36,6 @@ public class RotationOfNumberWay2 {
 
         System.out.println("op is: " + op);
 
-
-
-
         scn.close();
     }
 }
