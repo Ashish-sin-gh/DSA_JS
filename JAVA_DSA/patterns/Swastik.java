@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Swastik {
     public static void main (String[] args){
-         Scanner scn = new Scanner(System.in);
+        Scanner scn = new Scanner(System.in);
         System.out.print("enter the size: ");
         int size = scn.nextInt();
 
