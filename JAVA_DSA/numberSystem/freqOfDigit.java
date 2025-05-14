@@ -19,7 +19,7 @@ public class freqOfDigit {
             }
             num /= 10;
         }
-        System.out.println("freq of "+ digit +" is " + counter);
+        System.out.println("freq of "+ digit +" is " + counter);        
 
         scn.close();
     }
