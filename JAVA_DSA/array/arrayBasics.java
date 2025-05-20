@@ -23,7 +23,7 @@ public class arrayBasics {
         int[] arr2 = arr;
         arr2[1] = 200;
 
-        System.out.println(arr[1]);
-        System.out.println(arr2[1]);
+        System.out.println(arr[1]); // 200  NON PREMITIVE CREATE SHALLOW COPY 
+        System.out.println(arr2[1]); // 200
     }
 }
