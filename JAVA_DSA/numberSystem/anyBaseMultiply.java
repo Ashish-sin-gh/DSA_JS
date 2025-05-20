@@ -24,7 +24,10 @@ public class anyBaseMultiply {
             num2 /= 10;
 
         }
+
         System.out.println("the multiplcation is: " + sumOP);
+
+        scn.close();
         
     }
 
