@@ -8,5 +8,7 @@ class Basics{
         String s = scn.nextLine();
         int i = Integer.parseInt(scn.nextLine());
         System.out.println(s + " is " + i + " years old");
+
+        scn.close();
     }
 }

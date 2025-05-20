@@ -40,5 +40,7 @@ public class anyBaseSubstraction {
         }
 
         System.out.println("op is: " + finalAnswer);
+
+        scn.close();
     }
 }

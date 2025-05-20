@@ -28,6 +28,7 @@ public class digitOfNumbers {
             num = num % div;
             div = div / 10;
         }
-    
+        
+        scn.close();
     }
 }

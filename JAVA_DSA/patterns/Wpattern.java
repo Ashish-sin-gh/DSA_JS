@@ -30,6 +30,6 @@ public class Wpattern {
             System.out.println();
         }
 
-        scn.nextInt();
+        scn.close();
     }
 }

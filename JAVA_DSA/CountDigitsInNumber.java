@@ -12,5 +12,7 @@ class CountDigitsInNumber{
             div = div/10;
         }
         System.out.println("number of digits are: " + count);
+
+        scn.close();
     }
 }

@@ -18,5 +18,6 @@ public class Fibbonacci {
             second = sum;
             // System.out.println(sum);
         }
+        scn.close();
     }
 }

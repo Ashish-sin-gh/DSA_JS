@@ -21,5 +21,7 @@ public class anyBaseToDecimal {
         }
 
         System.out.println("the number " + bNum + " from base " + base + " to decimal is: " + cNum );
+   
+        scn.close();
     }
 }

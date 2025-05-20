@@ -28,6 +28,8 @@ public class anyBaseAddition {
             num2 /= 10;
             i++;
         }
-        System.out.println("op is: " + total);  
+        System.out.println("op is: " + total); 
+        
+        scn.close();
     }
 }

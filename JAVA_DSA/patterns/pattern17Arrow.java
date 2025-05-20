@@ -34,5 +34,7 @@ public class pattern17Arrow {
 
             System.out.println();
         }
+
+        scn.close();
     }
 }

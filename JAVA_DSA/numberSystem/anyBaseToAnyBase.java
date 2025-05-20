@@ -22,5 +22,7 @@ public class anyBaseToAnyBase {
             orignalNum /= baseTo;
         }
         System.out.println(orignalNum + " in base " + baseFrom + " to base " + baseTo + " is: " + newNum);
+    
+        scn.close();
     }
 }
