@@ -17,5 +17,7 @@ public class InverseOfNumber{
         }
 
         System.out.println("inverse is: " + newDigit);
+
+        scn.close();
     }
 }

@@ -26,8 +26,8 @@ class PrimeNumberChecker{
         System.out.print("enter the number: ");
         int num = scn.nextInt();
 
-        
-
         System.out.println(primeCheck(num));
+
+        scn.close();
     }
 }

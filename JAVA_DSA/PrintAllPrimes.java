@@ -22,5 +22,6 @@ class PrintAllPrimes{
         int high = scn.nextInt();
 
         printPrime(low, high);
+        scn.close();
     }
 }
