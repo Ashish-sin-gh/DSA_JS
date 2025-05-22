@@ -24,5 +24,7 @@ public class indexOfElement {
             }
         }
         System.out.print("\nthe index of key in the array is: "+ index);
+
+        scn.close();
     }
 }
