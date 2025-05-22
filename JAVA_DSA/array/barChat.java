@@ -39,5 +39,7 @@ public class barChat {
             }
             System.out.println();
         }
+
+        scn.close();
     }
 }
