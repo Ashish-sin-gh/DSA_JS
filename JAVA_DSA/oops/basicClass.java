@@ -28,12 +28,22 @@ public class basicClass {
         // p2.printDetails();
 
         // non premitive's shallow copy behaviour
-        p1.printDetails();
+        
+        // Java is always pass-by-value
+
+        /*p1 and p2 are references to Person objects.
+        When you call swap(p1, p2), copies of those references are passed to the method.
+        Inside swap, you swap those local copies, not the original references.
+        So p1 and p2 in main remain unchanged.
+        */
+
+        p1.printDetails();  
         p2.printDetails();
         
         swap(p1,p2);
         
         p1.printDetails();
-        p2.printDetails();
+        p2.printDetails(); 
+        // no change in the output even after swap funciton is called
     }
 }
