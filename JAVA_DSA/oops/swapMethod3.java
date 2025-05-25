@@ -35,11 +35,13 @@ public class swapMethod3 {
         p2.age = 10;
         p2.name = "hunny";
 
+        System.out.println("\nbefore swap: ");
         p1.getDetails();
         p2.getDetails();
 
         swap(p1, p2);
 
+        System.out.println("\nafter swap: ");
         p1.getDetails();
         p2.getDetails();
     }
