@@ -43,7 +43,7 @@ class HashTable {
 const hashtable = new HashTable(10);
 
 hashtable.set("ashish", 26);
-hashtable.set("hershita", 26);
+hashtable.set("harshita", 26);
 hashtable.set("ankita", 29);
 hashtable.set("kiran", 55);
 
