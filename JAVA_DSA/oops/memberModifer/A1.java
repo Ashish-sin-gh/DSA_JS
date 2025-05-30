@@ -10,5 +10,5 @@ public class A1 {
         void m2(){
             System.out.println("\nthis is a default method");
             System.out.println("this op ensures that method is default memeber and is being called from same package");
-        }  
+        }          
 }
