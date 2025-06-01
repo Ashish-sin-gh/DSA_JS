@@ -12,6 +12,6 @@ public class A2 {
         A1 a = new A1();
         a.m1();
         // a.m2();
-        m3();
+        m3(); // pvt memeber can be only called from within same class
     }
 }
