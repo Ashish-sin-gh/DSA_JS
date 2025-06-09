@@ -1,4 +1,5 @@
 /*
+    AUTOMATIC PROMOTION IN OVERLOADING 
   byte -> short -> int -> long -> float -> double
   char -> int -> long -> float -> double 
  */
@@ -26,5 +27,6 @@ public class automaticPromotionInOverloading {
         t.m1('a'); // complier will check for method signature, if it is not found the datype is promoted to next datatype
         // char -> int -> long -> float ->
         t.m1(10l); // long datatype of argument which is not present int the method table of test hence promote the datatype to float (if not present-> double) 
+        t.m1(1.1); // double - no promotion after this // compiler error
     }
 }
