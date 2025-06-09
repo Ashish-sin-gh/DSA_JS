@@ -28,6 +28,7 @@ public class methodOverloadInJava {
 }
 
 // in overloading method resolution is taken care by compiler (not JVM) based on reference type ( not based on run time object )
-// hence overloading is also called compile time polymorphism 
+// hence overloading is also called 
+// compile time polymorphism 
 // static polymorphism
 // early binding

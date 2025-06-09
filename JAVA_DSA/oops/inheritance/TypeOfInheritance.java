@@ -20,6 +20,11 @@ class SingleInheritance extends Parent1 {
 
 // java classes dont provide multiple inheritance 
 /* single child inheriting from muliple parents */
+
+// ambigiuity problem 
+/* reason - if more than one parent class have method with same name - child class wont     understand which class to access for that method */
+
+
 // class mulipleInheritance extends Parent1 Parent2{}       // error
 
 // multi-level inheritance 
