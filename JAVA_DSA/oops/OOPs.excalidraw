@@ -4617,11 +4617,11 @@
       "index": "b9U",
       "roundness": null,
       "seed": 1187994810,
-      "version": 225,
-      "versionNonce": 984354048,
+      "version": 285,
+      "versionNonce": 165320531,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1749106211343,
+      "updated": 1749348978905,
       "link": null,
       "locked": false,
       "points": [
@@ -8924,6 +8924,52 @@
       "originalText": "// compile java file",
       "autoResize": true,
       "lineHeight": 1.25
+    },
+    {
+      "id": "cX1NBPXfQCz624HLD0k_M",
+      "type": "line",
+      "x": 454.39325961912016,
+      "y": 7575.000053405762,
+      "width": 548.8000183105469,
+      "height": 24,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "cross-hatch",
+      "strokeWidth": 4,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "bCQ",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1478341725,
+      "version": 11,
+      "versionNonce": 774321171,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1749349061996,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          548.8000183105469,
+          -24
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null,
+      "polygon": false
     }
   ],
   "appState": {

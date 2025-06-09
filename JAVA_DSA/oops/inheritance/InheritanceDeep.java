@@ -1,4 +1,4 @@
-package oops;
+// package oops.inheritance;
 
 class Parent {
     public void m1(){
