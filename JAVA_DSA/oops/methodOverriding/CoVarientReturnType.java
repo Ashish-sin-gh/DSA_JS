@@ -2,6 +2,8 @@
     until 1.4 verion - return type must be same 
     
     after 1.4 - co varient (child type - eg-> if parent method return type is object child method return type can be String, StringBuffer, Integer, etc) return type is allowed
+
+    co-varient concept only aplicable for Object type (not premitive types)
 */
 package oops.methodOverriding;
 
