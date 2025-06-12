@@ -16,3 +16,11 @@ public class Ex6 {
 
 // interruptedException is thrown from the child class method 
 // hence parent class method should throw same or parent exception(Exception)
+
+/*
+    public void m1() throws EOFException, InterruptedException{}
+                ^
+    overridden method does not throw InterruptedException
+    1 error
+
+ */
