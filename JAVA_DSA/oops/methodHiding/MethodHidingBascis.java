@@ -3,7 +3,11 @@
  * it looks likes method overriding 
  * but look for static method in parent and child class method with same method signature 
  * 
- * in method hiding - method resolution is done by java compiler based on reference type   
+ * in method hiding - method resolution is done by java compiler based on reference type  
+ * 
+ * compile time polymorphism 
+ * static polymorphism 
+ * early binding  
  */
 
 package oops.methodHiding;
