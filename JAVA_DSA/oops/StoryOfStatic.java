@@ -9,11 +9,11 @@
  * 
  *  Static method-
 *           belongs to the class and not an object
-            you can call it withour creating an object 
+            you can call it without creating an object 
 
  *  Static block -
  *          use to initalize static data
- *          executs once once the class is loaded  
+ *          executs once the class is loaded  
  *  
  *  Static nested class- 
  *          only nested classes can be static. 
