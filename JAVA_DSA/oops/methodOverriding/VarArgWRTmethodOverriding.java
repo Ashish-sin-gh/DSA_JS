@@ -3,6 +3,8 @@
  * the int... and int is not same when it comes to number of parameters
  * 
  * hence it is over-loading concept as the method name is same and parameter is different 
+ * 
+ * to override var-arg containing method - use var-arg in child class method as well 
  */
 
 package oops.methodOverriding;
