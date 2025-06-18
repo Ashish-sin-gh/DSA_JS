@@ -14,7 +14,7 @@ import java.util.Stack;
 
 public class BalanceBracketApproch2 {
     public static void main(String[] args) {
-        String expression= "{[(a+b)+[(b+c)*(c+d)]}";
+        String expression= "{[(a+b)+[(b+c)*(c+d)]]})";
 
         Stack<Character> stackExp = new Stack<>();
 
@@ -23,7 +23,7 @@ public class BalanceBracketApproch2 {
             if(ch == '(' || ch == '{' || ch == '['){
                 stackExp.push(ch);
             } 
-            else if(ch == ')' || ch == '}' || ch == ']'){
+            else if(stackExp.size() != 0 && (ch == ')' || ch == '}' || ch == ']')){
                 char top = stackExp.peek();
                 
                 if(ch == ')' && top == '(' 
@@ -34,6 +34,9 @@ public class BalanceBracketApproch2 {
                     System.out.print(false);
                     return;
                 }
+            } else {
+                System.out.println(false);
+                return;
             }
         }
 
