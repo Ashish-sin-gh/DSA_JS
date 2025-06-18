@@ -1,4 +1,4 @@
-package JavaDSA.Stack;
+package JavaDSA.Stack.balanceBracket;
 
 import java.util.Scanner;
 import java.util.Stack;
@@ -39,7 +39,7 @@ public class BalanceBracket {
                 expressionStack.pop();
             } 
             else if(ch == '}') {
-                while(expressionStack.peek() != '}'){
+                while(expressionStack.peek() != '{'){
                     char top = expressionStack.peek();
                     if(top == '(' || top == '['){
                         System.out.println(false);
