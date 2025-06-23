@@ -3,7 +3,7 @@
  *  the way is to pop from the stack untill you get a number in the stack greater than that number you are checking
  */
 
-package JavaDSA.Stack;
+package JavaDSA.Stack.NGETR;
 
 import java.util.Scanner;
 import java.util.Stack;
@@ -45,5 +45,7 @@ public class Ngetr {
         for(int i = 0; i < arrAnswer.length; i++){
             System.out.println("next greater for " + arr[i] + " is " + arrAnswer[i]);
         }
+
+        scn.close();
     }
 }
