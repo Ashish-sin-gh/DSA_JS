@@ -4,17 +4,11 @@
 
 package ExceptionInJava;
 
-import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
 public class CheckedException {
     public static void main(String[] args) {
-        PrintWriter pw;
-        try{
-            pw = new PrintWriter("test.txt");
-        } catch(FileNotFoundException e) {
-            System.err.println("first make a file in the system");
-        } 
+        PrintWriter pw = new PrintWriter("test.txt");
         pw.println("hellow world");
     }
 }
