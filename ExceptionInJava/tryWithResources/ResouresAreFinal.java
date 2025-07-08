@@ -6,7 +6,7 @@ public class ResouresAreFinal {
             /*
              * some code
              */
-            fr = new FileReader("text2.txt");    // not possible as resources are final // compile time error
+            fr = new FileReader("text2.txt");    // resign not possible as resources are final // compile time error
         }
     }
 }
