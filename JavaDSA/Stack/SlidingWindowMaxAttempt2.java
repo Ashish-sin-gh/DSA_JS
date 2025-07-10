@@ -1,4 +1,4 @@
-package Stack;
+package JavaDSA.Stack;
 
 import java.util.Scanner;
 import java.util.Stack;
@@ -43,11 +43,14 @@ public class SlidingWindowMaxAttempt2 {
         }
 
         // check ngetr against window size
+        System.out.println("output is: ");
         for(int i = 0; i <= ngetr.length - windowSize; i++){
             int ngetrJump = i;
-            if(ngetr[ngetrJump] < i + windowSize){
+            while(ngetr[ngetrJump] < i + windowSize){
                 ngetrJump = ngetr[ngetrJump];
             }
+
+            System.out.println(arr[ngetrJump]);
         }   
     }
 }
