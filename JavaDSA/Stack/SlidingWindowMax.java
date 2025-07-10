@@ -1,4 +1,4 @@
-package Stack;
+package JavaDSA.Stack;
 
 import java.util.Scanner;
 import java.util.Stack;
@@ -19,9 +19,6 @@ public class SlidingWindowMax {
 
         System.out.print("enter the window size: ");
         int windowSize = scn.nextInt();
-
-        int[] resArr = new int[size - windowSize + 1];
-        int maxInWindow = Integer.MIN_VALUE;
 
         int lb = 0;
         int ub = windowSize - 1;
@@ -54,5 +51,7 @@ public class SlidingWindowMax {
             }
             System.out.println(arr[j]);
         }
+
+        scn.close();
     }
 }
