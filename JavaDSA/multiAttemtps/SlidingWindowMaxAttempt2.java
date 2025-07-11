@@ -1,4 +1,4 @@
-package JavaDSA.Stack;
+package JavaDSA.multiAttemtps;
 
 import java.util.Scanner;
 import java.util.Stack;
