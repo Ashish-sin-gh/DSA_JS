@@ -8,7 +8,6 @@
 package JavaDSA.Stack;
 
 import java.io.BufferedReader;
-import java.io.IOError;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Stack;
@@ -35,56 +34,20 @@ public class InfixConversion{
                 
             } else if(ch == ')'){
                 while(!operatorStack.isEmpty() && operatorStack.peek() != '('){
-                    char operator = operatorStack.pop();
-
-                    // prefix
-                    String operand1OfPrefix = prefixStack.pop();
-                    String operand2OfPrefix = prefixStack.pop();
-                    String result1 = operator + operand2OfPrefix + operand1OfPrefix;
-                    prefixStack.push(result1);
-
-                    // postfix
-                    String operand1OfPostfix = postfixStack.pop();
-                    String operand2OfPostfix = postfixStack.pop();
-                    String result2 = operand2OfPostfix + operand1OfPostfix + operator;  
-                    postfixStack.push(result2);
+                    conversionProcess(prefixStack, postfixStack, operatorStack);
                 }
                 operatorStack.pop();
 
             } else{
                 while(!operatorStack.isEmpty() && operatorStack.peek() != '(' && precedence(ch) <= precedence(operatorStack.peek())){
-                    char operator = operatorStack.pop();
-
-                    // prefix
-                    String operand1OfPrefix = prefixStack.pop();
-                    String operand2OfPrefix = prefixStack.pop();
-                    String result1 = operator + operand2OfPrefix + operand1OfPrefix;
-                    prefixStack.push(result1);
-
-                    // postfix
-                    String operand1OfPostfix = postfixStack.pop();
-                    String operand2OfPostfix = postfixStack.pop();
-                    String result2 = operand2OfPostfix + operand1OfPostfix + operator; 
-                    postfixStack.push(result2);
+                    conversionProcess(prefixStack, postfixStack, operatorStack);
                 }
                 operatorStack.push(ch);
             }
         }
 
         while(!operatorStack.isEmpty()){
-            char operator = operatorStack.pop();
-
-                    // prefix
-                    String operand1OfPrefix = prefixStack.pop();
-                    String operand2OfPrefix = prefixStack.pop();
-                    String result1 = operator + operand2OfPrefix + operand1OfPrefix;
-                    prefixStack.push(result1);
-
-                    // postfix
-                    String operand1OfPostfix = postfixStack.pop();
-                    String operand2OfPostfix = postfixStack.pop();
-                    String result2 = operand2OfPostfix + operand1OfPostfix + operator; 
-                    postfixStack.push(result2);
+            conversionProcess(prefixStack, postfixStack, operatorStack);
         }
 
         System.out.println("converted prefix exp: " + prefixStack.peek() );
@@ -98,6 +61,20 @@ public class InfixConversion{
             case '*' -> 2;
             default -> 2; 
         };
+    }
+
+    public static void conversionProcess(Stack<String> pre, Stack<String> post, Stack<Character> op){
+         char operator = op.pop();
+        // prefix
+        String operand1OfPrefix = pre.pop();
+        String operand2OfPrefix = pre.pop();
+        String result1 = operator + operand2OfPrefix + operand1OfPrefix;
+        pre.push(result1);
+        // postfix
+        String operand1OfPostfix = post.pop();
+        String operand2OfPostfix = post.pop();
+        String result2 = operand2OfPostfix + operand1OfPostfix + operator; 
+        post.push(result2);
     }
 
 }
