@@ -50,7 +50,7 @@ public class SmallestNumberFollowingPattern{
         }
 
         while(!finalNumPatternStack.isEmpty()){
-            System.out.println(finalNumPatternStack.pop());
+            System.out.print(finalNumPatternStack.pop());
         }
     }
 }
