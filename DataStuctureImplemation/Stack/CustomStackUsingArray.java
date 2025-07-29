@@ -1,3 +1,5 @@
+// using array one can only make a stack of fixed length
+
 package DataStuctureImplemation.Stack;
 
 public class CustomStackUsingArray {
