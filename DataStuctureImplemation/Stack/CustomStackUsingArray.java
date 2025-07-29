@@ -22,8 +22,8 @@ public class CustomStackUsingArray {
 
         //constructor
         CustomStack(int length){
-            this.stackArray = new int[length];
             this.length = length;
+            this.stackArray = new int[this.length];
             this.top = -1;
         }   
 
