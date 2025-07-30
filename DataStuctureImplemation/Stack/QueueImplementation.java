@@ -9,7 +9,7 @@ public class QueueImplementation {
         queue.push(40);
         queue.pop();
         queue.pop();
-        queue.display();
+        System.out.println(queue.peek());
     }
 
     public static class CustomQueue{
@@ -53,6 +53,10 @@ public class QueueImplementation {
         public int pop(){
             this.startpointer ++;
             return this.queueArray[this.startpointer];
+        }
+
+        public int peek(){
+            return this.queueArray[this.startpointer]; 
         }
 
         public void display(){
