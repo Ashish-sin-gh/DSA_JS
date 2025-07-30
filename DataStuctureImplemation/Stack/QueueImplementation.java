@@ -46,13 +46,23 @@ public class QueueImplementation {
 
         // push element
         public void push(int number){
-            this.endPointer ++;
-            this.queueArray[this.endPointer] = number;
+            if(!this.isFull()){
+                this.endPointer ++;
+                this.queueArray[this.endPointer] = number;
+            } else {
+                System.out.println("arry is full: cant push " + number);
+                return;
+            }
         }
 
         public int pop(){
-            this.startpointer ++;
-            return this.queueArray[this.startpointer];
+            if(!this.isEmpty()){
+                this.startpointer ++;
+                return this.queueArray[this.startpointer];
+            } else {
+                System.out.println("Stack is empty: cant pop anything");
+                return -1;
+            }
         }
 
         public int peek(){
@@ -64,6 +74,5 @@ public class QueueImplementation {
                 System.out.println(this.queueArray[i]);
             }
         }
-
     }
 }
