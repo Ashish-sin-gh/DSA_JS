@@ -51,3 +51,11 @@ Always remember to `assign new reference` variable for the linked list head and 
 #### Length of the linked List
 
 > time complexity -> `O(n)`
+
+#### Search in a linked List
+
+> time complexity ->
+
+    1. worst case -> O(n)
+    2. Average case -> O(n/2)
+    3. best case -> O(1)
