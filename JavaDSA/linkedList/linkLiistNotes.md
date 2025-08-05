@@ -33,7 +33,21 @@ used to implement Stack and queue
 #### used in a browser
 
 eg:
-google search tab -> Instagram.com -> open instagram messenger -> open user chat box  
-one can move betn above process in a tabs by forward and back button and also added new process to it, hence it is an example of linked list
+Google search tab -> Instagram.com -> open instagram messenger -> open user chat box  
+One can move betn above process in a tabs by forward and back button and also added new process to it, hence it is an example of linked list.
 
-###
+### Important operation on Linked list
+
+#### array to LinkedList
+
+> time complexity -> `O(n)`
+
+Always remember to `assign new reference` variable for the linked list head and then work on that new reference variable
+
+#### traverse in LinkedList
+
+> time complexity -> `O(n)`
+
+#### Length of the linked List
+
+> time complexity -> `O(n)`
