@@ -13,6 +13,11 @@ public class Delete1stElement {
             moveablePointer = moveablePointer.nextNode; 
         }
 
+        // delete first element 
+        head = head.nextNode;
+
+        System.out.println(head.data);
+
     }
 
     public static class Node{
@@ -28,4 +33,5 @@ public class Delete1stElement {
             this.data = element;
             this.nextNode = null;
         }
+    }
 }
