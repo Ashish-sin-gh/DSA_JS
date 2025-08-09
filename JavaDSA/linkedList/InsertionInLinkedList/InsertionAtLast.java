@@ -1,14 +1,12 @@
-/*
- * to insert in the head of a linkedlist - Just create a new node and point the nodes next to head of the Linked list
- * and then make the head point to that new node 
- * this will make it the first node in the linked list 
+/* 
+ * to insert at the last - create a new node - traverse the previous LL to the last node and then point that node to new node 
  * 
- * time complexity - O(1)
+ * time complexity - O(n)
  */
 
 package linkedList.InsertionInLinkedList;
 
-public class InsertionIn1stNode {
+public class InsertionAtLast {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6};
 
@@ -21,16 +19,21 @@ public class InsertionIn1stNode {
             moveablePointer = unlinkedNode;
         }
 
-        // add a new to node to the head
-        Node newNode = new Node(100, head);
-        head = newNode;
-        
+        // insert in the end
+        Node tempLL = head;
+        while(tempLL.next != null){
+            tempLL = tempLL.next;
+        }
+        Node newNode = new Node(100); // created new Node
+        tempLL.next = newNode; // last node is linked to this new node - making it the new last node
+
         // print the Linked list
         Node tempLLprint = head;
         while(tempLLprint != null){
             System.out.println(tempLLprint.data);
             tempLLprint = tempLLprint.next;
         }
+        
     }
 
     public static class Node{
