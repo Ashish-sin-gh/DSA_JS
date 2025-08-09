@@ -1,9 +1,9 @@
-package linkedList.InsertionInLinkedList;
+package JavaDSA.linkedList.InsertionInLinkedList;
 
 public class InsertingAtKthElement {
     public static void main(String[] args) {
          int[] arr = {1,2,3,4,5,6};
-         int key = 3; // add new node after 2nd position (2nd node)
+         int key = 6; // add new node after 2nd position (2nd node)
 
         Node head = new Node(arr[0]);
         Node moveablePointer = head;
@@ -26,13 +26,33 @@ public class InsertingAtKthElement {
 
         // insert in Kth position 
         Node tempLLinsert = head;
-        for(int i = 1; i < arr.length; i++){
-            if(i == key-1){
-                Node newNode = new Node(100, tempLLinsert.next);
-                tempLLinsert.next = newNode;
-                break;
+
+        if(tempLLinsert == null){
+            if(key == 1){
+                Node newNode = new Node(100);
+                head = newNode;
             }
-            tempLLinsert = tempLLinsert.next;
+        }
+        if(key == 1){
+            Node newNode = new Node(100, tempLLinsert);
+            head = newNode;
+        } else if(key == counter){
+            Node newNode = new Node(100, null);
+
+            while(tempLLinsert.next !=  null){
+                tempLLinsert = tempLLinsert.next;
+            }
+            tempLLinsert.next = newNode;
+
+        } else{
+            for(int i = 1; i < arr.length; i++){
+                if(i == key-1){
+                    Node newNode = new Node(100, tempLLinsert.next);
+                    tempLLinsert.next = newNode;
+                    break;
+                }
+                tempLLinsert = tempLLinsert.next;
+            }
         }
 
         // print the Linked list
