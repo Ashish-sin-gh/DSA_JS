@@ -1,28 +1,30 @@
 package JavaDSA.DoublyLinkedList.DeletionInDLL;
 
-public class DeleteFromHead {
+public class DeleteFromTail {
     public static void main(String[] args) {
-        int[] arr = { 10,20,30,40,50,60 };
-        
-        // array to doubly linked list
+        int[] arr = {10,20,30,40,50,60};
+
         Node head = new Node(arr[0]);
         Node moveableHead = head;
         for(int i = 1; i < arr.length; i++){
-            Node unlinkedNode = new Node(arr[i], null, moveableHead);
-            moveableHead.next = unlinkedNode;
-            moveableHead = unlinkedNode;
+            Node unlikedNode = new Node(arr[i], null, moveableHead);
+            moveableHead.next = unlikedNode;
+            moveableHead = unlikedNode;
         }
 
-        // delete from the head
+        // remove from tail
         if(head == null){
-            System.out.println("doubly linked list is null");
-        } else if(head.next == null) {
+            System.out.println("empty doubly linked list");
+        } else if (head.next == null){
             head = null;
         } else {
-            Node prev = head;
-            head = head.next;
-            head.back = null;
+            Node last = head;
+            while(last.next != null){
+                last = last.next;
+            }
+            Node prev = last.back;
             prev.next = null;
+            last.back = null;
         }
 
         //print the Doubly linked list
@@ -41,16 +43,16 @@ public class DeleteFromHead {
         Node next;
         Node back;
 
-        public Node(int data, Node next, Node back){
+        Node(int data){
             this.data = data;
-            this.back = back;
-            this.next = next;
+            this.next =  null; 
+            this.back =  null; 
         }
-
-        public Node(int data){
+        
+        Node(int data, Node next, Node back){
             this.data = data;
-            this.back = null;
-            this.next = null;
+            this.next =  next; 
+            this.back =  back; 
         }
     }
 }
