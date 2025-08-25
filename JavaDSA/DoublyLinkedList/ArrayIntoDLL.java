@@ -16,12 +16,11 @@ public class ArrayIntoDLL {
         }
 
         Node printNode = head;
-
         while(printNode != null){
             System.out.println("data- " + printNode.data + 
                 "   next- " + (printNode.next == null ? "null" : printNode.next.data) + 
                 "   back- " + (printNode.back == null ? "null" : printNode.back.data) 
-                );
+                    );
             printNode = printNode.next;
         }
     }
