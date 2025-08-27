@@ -45,14 +45,14 @@ public class DeleteFromTail {
 
         Node(int data){
             this.data = data;
-            this.next =  null; 
-            this.back =  null; 
+            this.next = null; 
+            this.back = null; 
         }
         
         Node(int data, Node next, Node back){
             this.data = data;
-            this.next =  next; 
-            this.back =  back; 
+            this.next = next; 
+            this.back = back; 
         }
     }
 }
