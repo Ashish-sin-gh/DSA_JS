@@ -1,4 +1,4 @@
-package DoublyLinkedList.DeletionInDLL;
+package JavaDSA.DoublyLinkedList.DeletionInDLL;
 
 public class KthNodeDeletion {
     public static void main(String[] args) {
@@ -12,32 +12,52 @@ public class KthNodeDeletion {
             moveableHead.next = unlinkedNode;
             moveableHead = unlinkedNode;
         }
-
-        // delete kth node
-        int k = 2;
-        Node deletableNode = head;
-        if(deletableNode == null){
-            System.out.println("Doubly linked List is empty");
-        } else if(deletableNode.next == null){
-            // single node in the DLL hence delete this node 
-            deletableNode = null;
-        } else {
-            int counter = 0;
-            while(deletableNode != null){
-                counter++;
-                if(counter == k){
-                    break;
-                }
-                deletableNode = deletableNode.next;
+        
+        int k = 4;
+        // point the pointer at the kth position
+        Node tempPointer = head;
+        int counter = 0;
+        while(tempPointer != null){
+            counter++;
+            if(counter == k){
+                break;
             }
+            tempPointer = tempPointer.next;
+        }
+        // find kth node's front and back
+        Node fwdNode = tempPointer.next;
+        Node bwdNode = tempPointer.back;
+        // if single node DLL
+        if(fwdNode == null && bwdNode == null){
+            tempPointer = null;
+        } else
+        // if kth node is tail
+        if(fwdNode == null){
+            bwdNode.next = null;
+            tempPointer.back = null;
+        } else
+        // if kth node is head
+        if(bwdNode == null){
+            fwdNode.back = null;
+            head = tempPointer.next;
+            tempPointer.next = null; 
+        } 
+        // if kth nod is in btn of the DLL head and tail
+        else {
+            bwdNode.next = fwdNode;
+            tempPointer.next = null;
+            fwdNode.back = bwdNode;
+            tempPointer.back = null;
+        }
 
-            if(k == 1){
-                Node nextNode = deletableNode.next;
-                deletableNode.next = null;
-                nextNode.back = null;
-                head = nextNode;
-
-            } else if( k == counter)
+        //print the Doubly linked list
+        Node printNode = head;
+        while(printNode != null){
+            System.out.println("data- " + printNode.data + 
+                "   next- " + (printNode.next == null ? "null" : printNode.next.data) + 
+                "   back- " + (printNode.back == null ? "null" : printNode.back.data) 
+                    );
+            printNode = printNode.next;
         }
     }
 
