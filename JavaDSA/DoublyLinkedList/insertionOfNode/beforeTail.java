@@ -16,11 +16,18 @@ public class beforeTail {
         while(currentNode.next != null){
             currentNode = currentNode.next;
         }
-        Node bwdNode = currentNode.back;
-        Node newNode = new Node(100, bwdNode, currentNode);
-        bwdNode.next = newNode;
-        currentNode.back = newNode;
-
+        if(currentNode.next == null){
+            // DLL has one node only - treat it as head of the DLL
+            Node newNode = new Node(100, null, currentNode);
+            currentNode.back = newNode;
+            head = newNode;
+        } else{
+            Node bwdNode = currentNode.back;
+            Node newNode = new Node(100, bwdNode, currentNode);
+            bwdNode.next = newNode;
+            currentNode.back = newNode;
+        }
+        
         //print the Doubly linked list
         Node printNode = head;
         while(printNode != null){
