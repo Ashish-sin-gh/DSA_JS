@@ -1,15 +1,6 @@
-// most basic way to reverse is to take the data if the each node and reverse it 
-// use an stack to store the data of the node and pop it out for every node
-// brute force
-// time complexity - O(2n)
-// space complexity - O(n)
-// not optimized solution
-
 package JavaDSA.DoublyLinkedList.ReverseDLL;
 
-import java.util.Stack;
-
-public class DataReverseDLL {
+public class NodeReversal {
     public static void main(String[] args) {
         int[] arr = {10,20,30,40,50};
         Node head = new Node(arr[0]);
@@ -31,31 +22,26 @@ public class DataReverseDLL {
             printNode = printNode.next;
         }
 
-        // reverse using stack and data of node
-        Stack<Integer> st = new Stack<>();
+        // reverse the node
         Node tempPointer = head;
         while(tempPointer != null){
-            st.push(tempPointer.data);
-            tempPointer = tempPointer.next;
+            Node tempNext = tempPointer.next;
+            tempPointer.next = tempPointer.back;
+            tempPointer.back = tempNext;
+            // System.out.println(tempPointer.back == null);
+            tempPointer = tempPointer.back;
         }
-        
-        System.out.println();
-        
-        tempPointer = head;
-        while(tempPointer != null){
-            tempPointer.data = st.pop();
-            tempPointer = tempPointer.next;
-        }
-        
+        // head = tempPointer;
+
         //print the Doubly linked list after reversal
         printNode = head;
-        System.out.println("DLL after reversal:");
+        System.out.println("\nDLL after reversal:");
         while(printNode != null){
             System.out.println("data- " + printNode.data + 
                 "   back- " + (printNode.back == null ? "null" : printNode.back.data) +
                 "   next- " + (printNode.next == null ? "null" : printNode.next.data) 
                 );
-            printNode = printNode.next;
+            printNode = printNode.back;
         }
     }
 
