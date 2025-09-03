@@ -28,7 +28,7 @@ public class AddNumbersOf2DLL {
         // reverseDLL(tempPointer2); 
 
         // System.out.println(tempPointer1.back.data);
-        
+
         int number1 = 0;
         int number2 = 0;
         int power1 = -1;
@@ -56,9 +56,23 @@ public class AddNumbersOf2DLL {
             tempPointer2 = tempPointer2.back;
         }
         
-        System.out.println(number1);
-        System.out.println(number2);
-        System.out.println(number1+number2);
+        int sum = number1 + number2;
+        
+        int rem = sum % 10;
+        Node head = new Node(rem);
+        sum = sum / 10;
+
+        Node tempHead = head;
+        while(sum != 0){
+            rem = sum % 10;
+            sum = sum / 10;
+            Node newNode = new Node(rem, null, tempHead);
+            tempHead.next = newNode;
+            tempHead = newNode;
+        }
+
+        Node printNode = head;
+        printDLL(printNode);
     }
 
     public static void insertFromArray(int[] arr, Node head){
