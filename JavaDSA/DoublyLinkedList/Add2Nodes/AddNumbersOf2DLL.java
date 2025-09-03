@@ -1,9 +1,9 @@
-package JavaDSA.DoublyLinkedList;
+package JavaDSA.DoublyLinkedList.Add2Nodes;
 
 public class AddNumbersOf2DLL {
     public static void main(String[] args){
         int[] arr1 = {1,2,3};
-        int[] arr2 = {1,2,3};
+        int[] arr2 = {3};
         
         Node head1 = new Node(arr1[0]);
         Node moveableHead1 = head1;
