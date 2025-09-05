@@ -1,9 +1,11 @@
+// using a list to store the Nde data
+
 package JavaDSA.DoublyLinkedList.oddEventLL;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UsingNoNewLL {
+public class UsingList {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6,7,8,9,0};
         Node head = new Node(arr[0]);
