@@ -2,7 +2,7 @@ package JavaDSA.DoublyLinkedList.SortLL;
 
 public class SortLLM2 {
     public static void main(String[] args) {
-        int[] arr = {1,0,1,2,0,2,1};
+        int[] arr = {0,2,2,0};
         Node head = new Node(arr[0]);
         insertFromArray(arr, head);
         
@@ -77,10 +77,14 @@ public class SortLLM2 {
             ptMain = ptMain.next;
         }
 
+        if(pt0 != null && pt1 != null) pt0.next = pt1Store1Node;
+        if(pt0 != null && pt1 == null) pt0.next = pt2Store1Node;
+        if(pt1 != null) pt1.next = pt2Store1Node;
+        if(pt2 != null) pt2.next = null;
+
         head = pt0Store1Node;
-        pt0.next = pt1Store1Node;
-        pt1.next = pt2Store1Node;
-        pt2.next = null;
+        if(pt0 == null && pt1 != null) head = pt1Store1Node;
+        if(pt1 == null && pt0 == null) head = pt2Store1Node;
         return head;
     }
 
