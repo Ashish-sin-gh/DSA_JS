@@ -1,7 +1,8 @@
 // in this approch we will be making 2 pointers and one will sitting (n) steps above other pointer so that we can stop 
 // slow pointer just before the deleteable node 
+// time complexity -> O(length of LL)
 
-package JavaDSA.DoublyLinkedList.removeNthNodeFromLast;
+package JavaDSA.linkedList.removeNthNodeFromLast;
 
 public class BetterApproch {
     public static void main(String[] args) {

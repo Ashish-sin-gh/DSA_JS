@@ -1,44 +1,43 @@
-// using 2 new Linked List
-// not very optimised soln
+// using a list to store the Nde data
 
-package JavaDSA.DoublyLinkedList.oddEventLL;
+package JavaDSA.linkedList.oddEventLL;
 
-public class FirstTry {
+import java.util.ArrayList;
+import java.util.List;
+
+public class UsingList {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6,7,8,9,0};
         Node head = new Node(arr[0]);
         insertFromArray(arr, head);
 
-        // code 
-        Node tempPointer = head;
-        int count = 0;
+        List<Integer> list = new ArrayList<>();
 
-        Node dummy1 = new Node(-1);
-        Node dummy2 = new Node(-1);
+        // main code
+        // add odd index to list
+        Node tempPt = head;
+        while(tempPt != null && tempPt.next != null){
+            list.add(tempPt.data);
+            tempPt = tempPt.next.next;
+        }
+        if(tempPt != null) list.add(tempPt.data);
+        
+        // add even index to the list
+        tempPt = head.next;
+        while(tempPt != null && tempPt.next != null){
+            list.add(tempPt.data);
+            tempPt = tempPt.next.next;
+        }
+        if(tempPt != null) list.add(tempPt.data);
 
-        Node dummy1pt = dummy1;
-        Node dummy2pt = dummy2;
-
-        while(tempPointer != null){
-            count++;
-            if(count % 2 != 0){
-                Node newOddNode = new Node(tempPointer.data);
-                dummy1pt.next = newOddNode;
-                dummy1pt = dummy1pt.next;
-            } else{
-                Node newEvenNode = new Node(tempPointer.data);
-                dummy2pt.next = newEvenNode;
-                dummy2pt = dummy2pt.next;
-            }
-            tempPointer = tempPointer.next;
+        tempPt = head;
+        int i = 0;
+        while(tempPt != null){
+            tempPt.data = list.get(i++);
+            tempPt = tempPt.next;
         }
 
-        dummy2pt = dummy2.next; 
-        dummy2 = null;
-        dummy1pt.next = dummy2pt; 
-        dummy1pt = dummy1.next;
-
-        Node tempPt = dummy1pt;
+        tempPt = head;
         printLL(tempPt);
     }
 
@@ -51,7 +50,7 @@ public class FirstTry {
         }
     }
 
-     public static void insertFromArray(int[] arr, Node head){
+    public static void insertFromArray(int[] arr, Node head){
         // head = new Node(arr[0]);
         Node moveableHead = head;
         // intial = new Node(arr[0]);

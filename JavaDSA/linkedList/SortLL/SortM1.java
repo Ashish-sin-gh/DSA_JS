@@ -5,7 +5,7 @@
 // time complexity - O(2n) -> two pass solution
 // space complexity - O(1)
 
-package JavaDSA.DoublyLinkedList.SortLL;
+package JavaDSA.linkedList.SortLL;
 
 public class SortM1 {
     public static void main(String[] args) {

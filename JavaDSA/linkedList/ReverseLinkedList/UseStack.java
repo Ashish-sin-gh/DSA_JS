@@ -1,54 +1,44 @@
-package JavaDSA.DoublyLinkedList.SortLL;
+package JavaDSA.linkedList.ReverseLinkedList;
 
-public class Approch3 {
+import java.util.Stack;
+
+public class UseStack {
     public static void main(String[] args) {
-        int[] arr = {2,0,2,2,0};
+        int[] arr = {1,2,3,4,5};
         Node head = new Node(arr[0]);
         insertFromArray(arr, head);
         
-        System.out.println("before sort: ");
+        System.out.println("before reverse: ");
         printLL(head);
-        
-        System.out.println("after sort: ");
-        head = sortLL123(head);
+
+        System.out.println("after reverse:");
+        head = reverseLL(head);
         printLL(head);
     }
 
-    public static Node sortLL123(Node head){
+    public static Node reverseLL(Node head){
         if(head == null || head.next == null){
             return head;
         }
 
-        Node pt0 = new Node(-1);
-        Node pt0store = pt0;
-        
-        Node pt1 = new Node(-1);
-        Node pt1store = pt1;
-        
-        Node pt2 = new Node(-1);
-        Node pt2store = pt2;
+        Stack<Node> st = new Stack<>();
 
         while(head != null){
-            if(head.data == 0){
-                pt0.next = head;
-                pt0 = head;
-            }
-            if(head.data == 1){
-                pt1.next = head;
-                pt1 = head;
-            }
-            if(head.data == 2){
-                pt2.next = head;
-                pt2 = head;
-            }
-
+            st.push(head);
+            // System.out.println(head.data);
             head = head.next;
         }
+        
+        Node newNode = st.pop();
+        Node headStore = newNode;
+        while(!st.isEmpty()){
+            Node newNode2 = st.pop();
+            newNode.next = newNode2;
+            newNode = newNode2;
+        }
+        newNode.next = null;
 
-        pt0.next = (pt1store.next != null) ? pt1store.next : pt2store.next;
-        pt1.next = pt2store.next;
-        pt2.next = null;
-        return pt0store.next;
+        return headStore;
     }
 
     public static void printLL(Node head){
@@ -84,5 +74,4 @@ public class Approch3 {
             this.next = next;
         }
     }
-
 }

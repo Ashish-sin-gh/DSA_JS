@@ -1,7 +1,7 @@
 // the most basic soln - using counter to count the number of Node in the linked list and then deleteing the desired node.
 // time complexity -> O(len of linked list) + O(len - n - 1) -> O(2len)
 // space complexity -> O(1)
-package JavaDSA.DoublyLinkedList.removeNthNodeFromLast;
+package JavaDSA.linkedList.removeNthNodeFromLast;
 
 public class BasicSoln{
     public static void main(String[] args){

@@ -1,44 +1,30 @@
-// using a list to store the Nde data
-
-package JavaDSA.DoublyLinkedList.oddEventLL;
+package JavaDSA.linkedList.oddEventLL;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UsingList {
+public class UsingSameLL {
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5,6,7,8,9,0};
+        int[] arr = {1,2,3,4,5};
         Node head = new Node(arr[0]);
         insertFromArray(arr, head);
 
-        List<Integer> list = new ArrayList<>();
-
         // main code
-        // add odd index to list
-        Node tempPt = head;
-        while(tempPt != null && tempPt.next != null){
-            list.add(tempPt.data);
-            tempPt = tempPt.next.next;
-        }
-        if(tempPt != null) list.add(tempPt.data);
-        
-        // add even index to the list
-        tempPt = head.next;
-        while(tempPt != null && tempPt.next != null){
-            list.add(tempPt.data);
-            tempPt = tempPt.next.next;
-        }
-        if(tempPt != null) list.add(tempPt.data);
+        Node oddPt = head;
+        Node evenPt = head.next;
+        Node evenPtstored = evenPt;
+        while(evenPt != null && evenPt.next != null){   
+            // time complexity - O(n) - even if while loop is going n/2 setps, there are 2 steps inside that is happening
+            // space complixty - O(1)
+            oddPt.next = oddPt.next.next;
+            evenPt.next = evenPt.next.next;
 
-        tempPt = head;
-        int i = 0;
-        while(tempPt != null){
-            tempPt.data = list.get(i++);
-            tempPt = tempPt.next;
+            oddPt = oddPt.next;
+            evenPt = evenPt.next;
         }
+        oddPt.next = evenPtstored; 
 
-        tempPt = head;
-        printLL(tempPt);
+        printLL(head);
     }
 
     public static void printLL(Node head){

@@ -1,4 +1,4 @@
-package JavaDSA.DoublyLinkedList.SortLL;
+package JavaDSA.linkedList.SortLL;
 
 public class SortLLM2 {
     public static void main(String[] args) {
