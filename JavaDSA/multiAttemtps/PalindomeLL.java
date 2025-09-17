@@ -1,38 +1,46 @@
-// IGNORE THE CODE - INCORRECT OUTPUT 
+package JavaDSA.multiAttemtps;
 
-// time complexity -> O(2n)
-// space complexity -> O(n)
-
-package JavaDSA.linkedList.PalinedromOrNotLL;
-
-public class FirstTry {
+public class PalindomeLL {
     public static void main(String[] args) {
         int[] arr = {1,2,3,1};
         Node head = new Node(arr[0]);
         insertFromArray(arr, head);
+
+        boolean cp = checkPalindrom(head);
         
-        System.out.println("before reverse: ");
-        printLL(head);
-
-        System.out.println("after reverse: ");
-        Node revHead = reverseLL(head);
-        printLL(revHead);
-
-        palindromChecker(head, revHead);
+        if(cp){
+            System.out.println("yes");
+        } else {
+            System.out.println("no");
+        }
     }
 
-    public static void palindromChecker(Node head, Node revHead){
-        while(head != null){
-            if(head.data != revHead.data){
-                System.out.println("\nnot palinedrom");
-                return;
-            } 
+    public static boolean checkPalindrom(Node head){
+        Node fastPt = head;
+        Node slowPt = head;
+        Node startPt1 = head;
 
-            head = head.next;
-            revHead = revHead.next;    
+        while(fastPt.next != null && fastPt.next.next != null){
+            slowPt = slowPt.next;
+            fastPt = fastPt.next.next;
         }
 
-        System.out.println("\nit is palinedrom");
+        Node startPt2 = slowPt.next;
+        
+        // reverse the 2nd part of LL
+        Node revStartNode = reverseLL(startPt2);
+
+        while(revStartNode != null){
+            if(revStartNode.data != startPt1.data){
+                reverseLL(revStartNode);
+                return false;
+            }
+            revStartNode = revStartNode.next;
+            startPt1 = startPt1.next;
+        }
+        reverseLL(revStartNode);    
+        return true;
+
     }
 
     public static Node reverseLL(Node head){
@@ -41,19 +49,10 @@ public class FirstTry {
         }
 
         Node newNode = reverseLL(head.next);
-        Node front = head.next;
-        front.next = head;
+        Node frontNode = head.next;
+        frontNode.next = head;
         head.next = null;
-
         return newNode;
-    }
-
-    public static void printLL(Node head){
-        while(head != null){
-            System.out.print(head.data + "  ");
-            head = head.next;
-        }
-        System.out.println();
     }
 
     public static void insertFromArray(int[] arr, Node head){

@@ -1,3 +1,8 @@
+// time complexity -> O(2n)
+// space complexity -> O(n)
+
+// optimization required - dont use extra space
+
 package JavaDSA.linkedList.PalinedromOrNotLL;
 
 import java.util.Stack;
