@@ -1,3 +1,8 @@
+// time complexity - O(3n)
+// space complexity - O(1)
+
+// time complexity is too much - do it in O(n) time
+
 package JavaDSA.linkedList.Add1ToLLnumber;
 
 public class RefactoredWay2 {
