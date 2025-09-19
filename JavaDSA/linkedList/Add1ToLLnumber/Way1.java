@@ -1,4 +1,5 @@
-// not still missing edge cases
+// missing edge cases
+// wrong code
 
 package JavaDSA.linkedList.Add1ToLLnumber;
 
@@ -10,7 +11,7 @@ public class Way1 {
 
         Node revHead = add1ToLL(head, carry);
         
-        if(carry > 0 && ){
+        if(carry > 0){
             head.data += carry;
             carry = 0;     
         }
